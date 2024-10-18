@@ -1,0 +1,100 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header1 {
+background-color: #0d42d4; /* Taustaväri */
+color: white;              /* Tekstiväri, joka erottuu taustasta */
+padding: 10px 0;          /* Yläsivun ja alareunan täyttö */
+text-align: center;       /* Keskittää tekstin */
+width: 100%;              /* Ota koko leveys */
+}
+
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav button {
+    position: relative; /* Tässä tarvitaan */
+    margin: 0 15px;
+    padding: 0; /* Poista ylimääräinen padding */
+    background: none; /* Ei taustaväriä */
+    border: none; /* Ei reunusta */
+    cursor: pointer;
+}
+
+nav .image-button img {
+    display: block;
+    width: 100px;
+    height: 50px;
+}
+
+.button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    pointer-events: none; /* Estää klikkauksen häiritsemisen */
+}
+
+/* Tyylit AFC ja NFC laatikoille */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.box {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 45%; /* Kaksi laatikkoa vierekkäin */
+    border-radius: 10px;
+}
+
+.sub-box {
+    background-color: #444; /* Tummempi taustaväri alalaatikoille */
+    color: white;
+    margin: 10px 0; /* Lisää tilaa alalaatikoiden väliin */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Tyylit ala-alalaatikoille */
+.nested-box {
+    background-color: #666; /* Vaaleampi taustaväri ala-alalaatikoille */
+    color: white;
+    margin: 5px 0; /* Lisää tilaa ala-alalaatikoiden väliin */
+    padding: 10px;
+    border-radius: 3px;
+}
+a:link {
+color: white;
+background-color: transparent;
+text-decoration: none;
+}
+a:visited {
+color: white;
+background-color: transparent;
+text-decoration: none;
+}
+a:hover {
+color: white;
+background-color: transparent;
+text-decoration: underline;
+}
+a:active {
+color: white;
+background-color: transparent;
+text-decoration: underline;
+}

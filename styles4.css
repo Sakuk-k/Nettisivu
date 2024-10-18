@@ -1,0 +1,118 @@
+/* Yleiset Tyylit */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header1 {
+    color: white;            /* Tekstiväri, joka erottuu taustasta */
+    padding: 10px 0;        /* Yläsivun ja alareunan täyttö */
+    text-align: center;     /* Keskittää tekstin */
+    width: 100%;            /* Ota koko leveys */
+}
+
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav button {
+    position: relative; /* Tässä tarvitaan */
+    margin: 0 15px;
+    padding: 0; /* Poista ylimääräinen padding */
+    background: none; /* Ei taustaväriä */
+    border: none; /* Ei reunusta */
+    cursor: pointer;
+}
+
+nav .image-button img {
+    display: block;
+    width: 100px;
+    height: 50px;
+}
+
+.button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    pointer-events: none; /* Estää klikkauksen häiritsemisen */
+}
+
+section {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Lisää tarvittaessa */
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+.button1 {
+  border: none;
+  color:#ff6600;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #ff6600; 
+  color: black; 
+  border: 2px solid #ff6600;
+}
+
+.button1:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.button2 {
+  border: none;
+  color:#003399;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: #003399; 
+  color: black; 
+  border: 2px solid #003399;
+}
+
+.button2:hover {
+  background-color: #003399;
+  color: white;
+}
+

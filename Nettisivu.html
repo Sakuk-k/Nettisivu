@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kick Off</title>
+	
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+<style>
+body {
+  background-image: url('assets/pictures/nfl.jpg');
+  background-repeat: no-repeat;
+}
+</style>
+
+<header1>
+    <h1>Kick Off</h1>
+</header1>
+
+<nav>
+    <button onclick="window.location.href='Nettisivu.html'" class="image-button">
+        <img src="assets/pictures/Pallo.png" alt="Etusivu">
+        <span class="button-text">Etusivu</span>
+    </button>
+    <button onclick="window.location.href='Nettisivu2.html'" class="image-button">
+        <img src="assets/pictures/Pallo.png" alt="Suomi-sarjat">
+        <span class="button-text">Suomi-sarjat</span>
+    </button>
+    <button onclick="window.location.href='Nettisivu3.html'" class="image-button">
+        <img src="assets/pictures/Pallo.png" alt="NFL">
+        <span class="button-text">NFL</span>
+    </button>
+    <button onclick="window.location.href='Nettisivu4.html'" class="image-button">
+        <img src="assets/pictures/Pallo.png" alt="Foorumi">
+        <span class="button-text">Foorumi</span>
+    </button>
+</nav>
+
+<div class="content">
+    <section class="welcome">
+        <h2>Tervetuloa!</h2>
+        <p>Tervetuloa Kick Off-sivustolle, amerikkalaisen jalkapallon sydämeen! Olemme luoneet tämän alustan, jotta fanit, pelaajat ja asiantuntijat voivat helposti löytää kaikki ajankohtaiset uutiset, tulokset ja syvälliset analyysit jenkkifutiksesta. Liity joukkoomme ja syvenny lajin maailmaan yhdessä kanssamme!</p>
+    </section>
+
+    <aside class="calendar">
+        <div class="calendar-header">
+            <button id="prevMonth">&lt;</button>
+            <h2 id="monthYear">Tammikuu 2024</h2>
+            <button id="nextMonth">&gt;</button>
+        </div>
+        <div class="calendar-weekdays">
+            <div>Su</div>
+            <div>Ma</div>
+            <div>Ti</div>
+            <div>Ke</div>
+            <div>To</div>
+            <div>Pe</div>
+            <div>La</div>
+        </div>
+        <div class="calendar-days" id="calendarDays">
+            <!-- Päivät lisätään JavaScriptillä -->
+        </div>
+    </aside>
+</div>
+
+<!-- Kirjautumispainike -->
+<button id="openLoginBtn">Kirjaudu sisään</button>
+
+<!-- Kirjautumismodaali -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Kirjaudu sisään</h2>
+        <p><b>Info:</b>Käyttäjänimi:<b>testi</b> Salasana:<b>qwerty123</b> </p>
+        <form id="loginForm">
+            <label for="username">Käyttäjänimi:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Salasana:</label>
+            <input type="password" id="password" required><br><br>
+            <button type="submit">Kirjaudu</button>
+        </form>
+    </div>
+</div>
+
+<!-- Tapahtumien lisäyslomake -->
+<div id="eventModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Lisää tapahtuma</h2>
+        <form id="eventForm">
+            <label for="eventDate">Päivämäärä:</label>
+            <input type="date" id="eventDate" required><br><br>
+            <label for="eventName">Tapahtuman nimi:</label>
+            <input type="text" id="eventName" required><br><br>
+            <button type="submit">Tallenna</button>
+        </form>
+    </div>
+</div>
+
+<button id="logoutBtn" style="display: none;">Kirjaudu ulos ja tyhjennä tapahtumat</button>
+<div class="content">
+    
+	<section class="welcome2">
+<h3>Tulevat tapahtumat</h3>
+<ul id="eventsList"></ul>
+ </section>
+
+<footer>
+    <p>© 2024 Kick Off. Kaikki oikeudet pidätetään.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
