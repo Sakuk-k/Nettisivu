@@ -1,10 +1,10 @@
-
+/* Yleiset Tyylit */
 header1 {
-    background-color:#0d42d4; 
-    color:white;              
-    padding: 10px 0;          
-    text-align: center;       
-    width: 100%;              
+    background-color:#0d42d4; /* Taustaväri */
+    color:white;              /* Tekstiväri, joka erottuu taustasta */
+    padding: 10px 0;          /* Yläsivun ja alareunan täyttö */
+    text-align: center;       /* Keskittää tekstin */
+    width: 100%;              /* Ota koko leveys */
 }
 
 body {
@@ -58,8 +58,8 @@ nav .image-button img {
 
 .content {
     display: flex;
-    justify-content: space-between; 
-    align-items: flex-start; 
+    justify-content: space-between; /* Varmistaa, että elementit ovat vierekkäin */
+    align-items: flex-start; /* Varmistaa, että elementit pysyvät ylhäällä */
     margin: 20px;
 }
 
@@ -68,8 +68,8 @@ nav .image-button img {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 60%; 
-    margin-right: 20px; 
+    width: 60%; /* Voit säätää tätä leveyttä tarpeen mukaan */
+    margin-right: 20px; /* Lisää väli tervetulotekstin ja kalenterin väliin */
 }
 
 .welcome2 {
@@ -77,8 +77,8 @@ nav .image-button img {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 15%; 
-    margin-right: 20px; 
+    width: 15%; /* Voit säätää tätä leveyttä tarpeen mukaan */
+    margin-right: 20px; /* Lisää väli tervetulotekstin ja kalenterin väliin */
 }
 
 .calendar {
@@ -86,7 +86,7 @@ nav .image-button img {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 35%; 
+    width: 35%; /* Voit säätää tätä leveyttä tarpeen mukaan */
 }
 
 .calendar-header {
