@@ -1,4 +1,4 @@
-/* Yleiset Tyylit */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -10,10 +10,10 @@ body {
 }
 
 header1 {
-    color: white;            /* Tekstiväri, joka erottuu taustasta */
-    padding: 10px 0;        /* Yläsivun ja alareunan täyttö */
-    text-align: center;     /* Keskittää tekstin */
-    width: 100%;            /* Ota koko leveys */
+    color: white;          
+    padding: 10px 0;       
+    text-align: center;    
+    width: 100%;           
 }
 
 
@@ -23,11 +23,11 @@ nav {
 }
 
 nav button {
-    position: relative; /* Tässä tarvitaan */
+    position: relative; 
     margin: 0 15px;
-    padding: 0; /* Poista ylimääräinen padding */
-    background: none; /* Ei taustaväriä */
-    border: none; /* Ei reunusta */
+    padding: 0; 
+    background: none; 
+    border: none; 
     cursor: pointer;
 }
 
@@ -46,13 +46,13 @@ nav .image-button img {
     font-size: 16px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    pointer-events: none; /* Estää klikkauksen häiritsemisen */
+    pointer-events: none; 
 }
 
 section {
     padding: 20px;
     width: 100%;
-    max-width: 1200px; /* Lisää tarvittaessa */
+    max-width: 1200px; 
     box-sizing: border-box;
 }
 
