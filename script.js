@@ -16,7 +16,7 @@ const months = [
 let events = {};
 let isLoggedIn = false;
 
-
+// Avataan tapahtuman lisääminen
 function openModal(day) {
     if (!isLoggedIn) {
         alert("Sinun täytyy kirjautua sisään lisätäksesi tapahtumia.");
@@ -42,6 +42,7 @@ document.getElementById('eventForm').addEventListener('submit', function(e) {
         return;
     }
 
+    // Lisätään tapahtuma
     if (!events[eventDate]) {
         events[eventDate] = [];
     }
@@ -54,20 +55,21 @@ document.getElementById('eventForm').addEventListener('submit', function(e) {
     displayEvents();
 });
 
-
+// Luodaan kalenteri
 function renderCalendar(month, year) {
     calendarDays.innerHTML = '';
     let firstDay = new Date(year, month).getDay();
     let daysInMonth = 32 - new Date(year, month, 32).getDate();
     monthYear.textContent = `${months[month]} ${year}`;
 
-   
+    // Tyhjät solut ennen kuukauden ensimmäistä päivää
     for (let i = 0; i < firstDay; i++) {
         let emptyCell = document.createElement('div');
         emptyCell.innerHTML = '';
         calendarDays.appendChild(emptyCell);
     }
 
+    // Lisätään päivät kalenteriin
     for (let day = 1; day <= daysInMonth; day++) {
         let dayCell = document.createElement('div');
         dayCell.textContent = day;
@@ -98,7 +100,7 @@ function renderCalendar(month, year) {
     displayEvents();
 }
 
-
+// Siirretään kuukausia
 prevMonthBtn.addEventListener('click', () => {
     currentMonth--;
     if (currentMonth < 0) {
@@ -117,7 +119,7 @@ nextMonthBtn.addEventListener('click', () => {
     renderCalendar(currentMonth, currentYear);
 });
 
-
+// Hae tapahtumat localStoragesta
 if (localStorage.getItem('events')) {
     events = JSON.parse(localStorage.getItem('events'));
 }
@@ -126,7 +128,7 @@ function saveEvents() {
     localStorage.setItem('events', JSON.stringify(events));
 }
 
-
+// Näytetään tapahtumat
 function displayEvents() {
     const eventsList = document.getElementById("eventsList");
     eventsList.innerHTML = "";
@@ -141,7 +143,7 @@ function displayEvents() {
     }
 }
 
-
+// Kirjautumisen käsittely
 const loginModal = document.getElementById("loginModal");
 const openLoginBtn = document.getElementById("openLoginBtn");
 const closeLoginSpan = document.getElementsByClassName("close")[0];
@@ -172,28 +174,28 @@ document.getElementById("loginForm").onsubmit = function(e) {
         alert("Kirjautuminen onnistui!");
         isLoggedIn = true;
         loginModal.style.display = "none";
-        document.getElementById('logoutBtn').style.display = "block"; 
-        displayEvents(); 
+        document.getElementById('logoutBtn').style.display = "block"; // Näytetään Kirjaudu ulos -nappi
+        displayEvents(); // Näytetään tapahtumat
     } else {
         alert("Virheellinen käyttäjätunnus tai salasana!");
     }
 };
 
-
+// Kirjaudu ulos ja tyhjennä tapahtumat
 document.getElementById("logoutBtn").addEventListener("click", function() {
     if (confirm("Haluatko varmasti kirjautua ulos ja poistaa kaikki tapahtumat?")) {
         events = {};
-        saveEvents(); 
+        saveEvents(); // Poistetaan localStoragesta
         
-        displayEvents(); 
+        displayEvents(); // Piilotetaan tapahtumat
 
-        document.getElementById("logoutBtn").style.display = "none"; 
-        isLoggedIn = false; 
-        renderCalendar(currentMonth, currentYear); 
+        document.getElementById("logoutBtn").style.display = "none"; // Piilotetaan Kirjaudu ulos -nappi
+        isLoggedIn = false; // Aseta kirjautumisen tila vääräksi
+        renderCalendar(currentMonth, currentYear); // Päivitä kalenteri ilman tapahtumia
 
         alert("Olet kirjautunut ulos ja tapahtumat on poistettu.");
     }
 });
 
-
+// Alustetaan kalenteri sivun latautuessa
 renderCalendar(currentMonth, currentYear);
