@@ -183,7 +183,7 @@ document.getElementById("loginForm").onsubmit = function(e) {
 document.getElementById("logoutBtn").addEventListener("click", function() {
     if (confirm("Haluatko varmasti kirjautua ulos ja poistaa kaikki tapahtumat?")) {
         events = {};
-        saveEvents(); /
+        saveEvents(); 
         
         displayEvents(); 
 
